@@ -105,6 +105,7 @@ const createFaculty = async (
 
   // set role
   user.role = 'faculty';
+  console.log(faculty, user);
 
   let newUserAllData = null;
   const session = await mongoose.startSession();

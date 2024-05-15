@@ -70,7 +70,7 @@ const getAllDepartments = async (
     sortConditions[sortBy] = sortOrder;
   }
 
-  // If there is no condition , put {} to give all data
+  // If there is no condition put {} to give all data
   const whereConditions =
     andConditions.length > 0 ? { $and: andConditions } : {};
 

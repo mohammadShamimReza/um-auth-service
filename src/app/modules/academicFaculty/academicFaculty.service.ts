@@ -48,7 +48,7 @@ const getAllFaculties = async (
   }
 
   // Filters needs $and to fullfill all the conditions
-  console.log(filtersData)
+  console.log(filtersData);
   if (Object.keys(filtersData).length) {
     andConditions.push({
       $and: Object.entries(filtersData).map(([field, value]) => ({
@@ -63,7 +63,7 @@ const getAllFaculties = async (
     sortConditions[sortBy] = sortOrder;
   }
 
-  // If there is no condition , put {} to give all data
+  // If there is no condition put {} to give all data
   const whereConditions =
     andConditions.length > 0 ? { $and: andConditions } : {};
 
